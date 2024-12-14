@@ -4,9 +4,10 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
 
-# Fungsi untuk memuat data
+# Fungsi untuk memuat data dari GitHub
 def muat_data(nama_file):
-    return pd.read_csv(f"datasets/{nama_file}")
+    url = f"https://raw.githubusercontent.com/galihsangraa/analisisdata/main/my_streamlit_app/datasets/{nama_file}"
+    return pd.read_csv(url)
 
 # Sidebar navigasi
 st.sidebar.title("Navigasi")
